@@ -6,10 +6,8 @@ import path from 'path'
 const channelId = '375312440008638474'
 
 export default class Bot {
-  constructor (botToken) {
+  constructor () {
     this.main = this.main.bind(this)
-
-    this.botToken = botToken
 
     this.client = new Discord.Client()
     this.client.on("ready", async () => {
@@ -20,7 +18,7 @@ export default class Bot {
       console.log('Bot initialized')
     })
 
-    this.client.login(botToken)
+    this.client.login(process.env.BOT_TOKEN)
 
     this.sheet = XLSX.utils.sheet_to_json(XLSX.readFile(path.resolve(__dirname, '../SWGoH_Shard.xlsx')).Sheets.Sheet1)
     this.parseXlsx()
