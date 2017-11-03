@@ -2,25 +2,15 @@
   "name": "shard-payout",
   "version": "1.0.0",
   "description": "",
-  "main": "./lib",
+  "main": ".src/index.js",
   "scripts": {
-    "compile": "babel src --out-dir lib",
-    "start": "npm run compile && node ./lib"
+    "start": "node src/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Tarnadas/shard-payout.git"
-  },
-  "author": "Mario Reder",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Tarnadas/shard-payout/issues"
-  },
-  "homepage": "https://github.com/Tarnadas/shard-payout#readme",
   "dependencies": {
     "discord.js": "^11.1.0",
     "uws": "^8.14.1",
-    "xlsx": "^0.11.1"
+    "xlsx": "^0.11.1",
+    "request": "2.81.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
