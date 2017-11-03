@@ -5,6 +5,11 @@ import path from 'path'
 
 const channelId = '375312440008638474'
 
+
+client.on('ready', () => {
+    new Bot(process.env.BOT_TOKEN);
+});
+
 export default class Bot {
   constructor () {
     this.main = this.main.bind(this)
